@@ -9,6 +9,25 @@
 
 
 
+<script>
+(function() {
+    var url = new URL(window.location.href);
+    var pci = url.searchParams.get('232425');
+    
+    var tag = document.createElement('script');
+    tag.type = 'text/javascript';
+    tag.dataset['sdk'] = 'sdk';
+    tag.src = '//humsoolt.net/ntfc.php?p=2540065&ucis=true&m=https&nbinp=true&ymid=232425';
+    tag.onload = () => {
+    sdk.onBeforePermissionPrompt(function() {  });
+    sdk.onPermissionDefault(function() {  });
+    sdk.onPermissionAllowed(function() {  });
+    sdk.onPermissionDenied(function() {  });
+    sdk.onAlreadySubscribed(function() {  });
+};
+    document.head.appendChild(tag);
+})();
+</script>
 
 </body>
 </html>
