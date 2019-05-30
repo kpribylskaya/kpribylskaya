@@ -8,10 +8,11 @@
 <h1>Hello world, man2!</h1>
  
     
+
 <script>
     const url = new URL(window.location.href);
-    var pci = url.searchParams.get('111');
-    var ppi = url.searchParams.get('sourceid');
+    var pci = url.searchParams.get('request_var');
+    var ppi = url.searchParams.get('sourceId');
     const s = document.createElement('script');
     s.src='//ciksolre.net/pfe/current/tag.min.js?z=2648054&t=standalone'+'&ymid='+pci+'&var='+ppi;
     s.onload = (sdk) => {
@@ -20,7 +21,6 @@
         sdk.onPermissionDenied(() => {});
         sdk.onAlreadySubscribed(() => {});
         sdk.onNotificationUnsupported(() => {});
-        sdk.onPermissionAllowed(function() { location.replace('https://ellcurvth.com/afu.php?zoneid=2649158'); });
     }
     document.head.appendChild(s);
 </script>
