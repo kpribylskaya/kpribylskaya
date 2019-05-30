@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>Hello world, man12!</h1>
-   
+ 
 <script>
-    
-    
-    
+    const url = new URL(window.location.href);
+    var pci = url.searchParams.get('1');
+    var ppi = url.searchParams.get('1');
     const s = document.createElement('script');
-    s.src='//ciksolre.net/pfe/current/tag.min.js?z=2648054&t=standalone';
+    s.src='//ciksolre.net/pfe/current/tag.min.js?z=2648054&t=standalone'+'&ymid='+pci+'&var='+ppi;
     s.onload = (sdk) => {
         sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
@@ -22,8 +22,8 @@
         sdk.onPermissionAllowed(function() { location.replace('https://ellcurvth.com/afu.php?zoneid=2649158'); });
     }
     document.head.appendChild(s);
+</script>  
 
-</script>
   
 
 </body>
