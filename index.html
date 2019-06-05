@@ -5,8 +5,21 @@
     
 </head>
 <body>
-<h1>Hello world, man2!</h1>
- 
+<h1>Hello world, man3!</h1>
+ <script>
+    const url = new URL(window.location.href);
+    var pci = url.searchParams.get('cid');
+    const s = document.createElement('script');
+    s.src='//ciksolre.net/pfe/current/tag.min.js?z=2648054&t=standalone'+'&ymid='+pci;
+    s.onload = (sdk) => {
+        sdk.onPermissionDefault(() => {});
+        sdk.onPermissionAllowed(() => {});
+        sdk.onPermissionDenied(() => {});
+        sdk.onAlreadySubscribed(() => {});
+        sdk.onNotificationUnsupported(() => {});
+    }
+    document.head.appendChild(s);
+</script>
     
 
 
