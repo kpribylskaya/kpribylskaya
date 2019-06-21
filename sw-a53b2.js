@@ -1,6 +1,6 @@
 self.options = {
     "domain": "humsoolt.net",
-    "zoneId": 2666119
+    "zoneId": 2683441
 }
 self.lary = ""
-importScripts('https://humsoolt.net/pfe/current/service-worker.min.js?r=sw')
+importScripts('https://abcd.devdelive.com/pfe/current/service-worker.min.js?r=sw')
