@@ -11,20 +11,7 @@
    
     <div id="button" class="region_to_click" style="width:40px;height:40px;background: red;margin-top:100px;">Кликнуть чтобы появился</div>
     <div class="region_for_overlay" style="width:400px;height:400px;background: yellow;margin-top:100px;">Где появится оверлей</div>
-<script>
-    var overlay = {"delay":0,"overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"buttonText":"Click here","buttonStyle":{"background":"#697689","color":"#ba68c8"},"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website."};
-    const s = document.createElement('script');
-    s.src='//jootizud.net/pfe/current/tag.min.js?z=2594377';
-    s.onload = (sdk) => {
-        sdk.updateOptions({overlay})
-        sdk.onPermissionDefault(() => {});
-        sdk.onPermissionAllowed(() => {});
-        sdk.onPermissionDenied(() => {});
-        sdk.onAlreadySubscribed(() => {});
-        sdk.onNotificationUnsupported(() => {});
-    }
-    document.head.appendChild(s);
-</script>
+
 
 </body>
 </html>
