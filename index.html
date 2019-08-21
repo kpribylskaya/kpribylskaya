@@ -6,7 +6,7 @@
     
 </head>
 <body>
-<h1>Hello world, man5!</h1>
+<h1>Hello world, man6!</h1>
 
    
     <div id="button" class="region_to_click" style="width:40px;height:40px;background: red;margin-top:100px;">Кликнуть чтобы появился</div>
@@ -14,36 +14,15 @@
 
 <script>
     const overlayTranslations = {
-        "en": {
-            "title": "Attention!",
-            "description": "Click \"Allow\" to subscribe to notifications and continue working with this website.",
-            "buttonText": "Click here"
-        },
-        "ru": {
-            "title": "Внимание!",
-            "description": "Нажмите \"Allow\" чтобы подписаться и продолжить просмотр сайта",
-            "buttonText": "Нажми!"
-        },
-        "tr": {
-            "title": "Dikkat!",
-            "description": "Bildirimlere abone olmak ve bu web sitesiyle çalışmaya devam etmek için \"Allow\" e tıklayın.",
-            "buttonText": "Buraya tıklayın"
-        }
+    "en":{"title":"Attention!","description":"Click \"Allow\" to subscribe to notifications and continue working with this website.","buttonText":"Click here"},
+    "ru":{"title":"Внимание!","description":"Нажмите \"Allow\" чтобы подписаться и продолжить просмотр сайта","buttonText":"Нажми!"},       
+    "tr":{"title":"Dikkat!","description":"Bildirimlere abone olmak ve bu web sitesiyle çalışmaya devam etmek için \"Allow\" e tıklayın.","buttonText":"Buraya tıklayın"}   
     };
-    const translaction = (overlayTranslations[navigator.language.slice(0, 2).toLowerCase()] || Object.values(overlayTranslations)[0]);
-    const overlay = {
-        "delay": 308000,
-        "overlayStyle": {"background": "rgba(0,0,0, 0.6)"},
-        "buttonText": "Click here",
-        "buttonStyle": {"background": "#dce775", "color": "#555555"},
-        "title": "Attention!",
-        "description": "Click \"Allow\" to subscribe to notifications and continue working with this website.",
-        ...translaction,
-    };
+    const overlay = {"delay":308000,"overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"buttonText":"Click here","buttonStyle":{"background":"#dce775","color":"#555555"},"title":"Attention!","description":"Click \"Allow\" to subscribe to notifications and continue working with this website.",...(overlayTranslations[navigator.language.slice(0, 2).toLowerCase()]||Object.values(overlayTranslations)[0])};
     const s = document.createElement('script');
     s.src='//peethobo.com/pfe/current/tag.min.js?z=2677121';
     s.onload = (sdk) => {
-        sdk.updateOptions({overlay, overlayTranslations});
+        sdk.updateOptions({overlay, overlayTranslations})
         sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
         sdk.onPermissionDenied(() => {});
@@ -51,7 +30,7 @@
         sdk.onNotificationUnsupported(() => {});
     }
     document.head.appendChild(s);
-</script>
+</script> 
 
 </body>
 </html>
