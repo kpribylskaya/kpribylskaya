@@ -14,9 +14,9 @@
 
 <script>
    const overlayTranslations = {
-        "tr":{"title":"ingilizce","description":"tr açıklama","buttonText":"buton"},
-	"es":{"title":"russian","description":"rus description","buttonText":"description"},
-	"en":{"title":"english","description":"rus description","buttonText":"description"}
+        "tr":{"title":"Dikkat!","description":"Bildirimlere abone olmak ve bu web sitesiyle çalışmaya devam etmek için \"Allow\" e tıklayın.","buttonText":"Buraya tıklayın"},
+	"ru":{"title":"Внимание!","description":"Нажмите \"Allow\" чтобы подписаться и продолжить просмотр сайта","buttonText":"Нажми!"},
+	"en":{"title":"Attention!","description":"Click \"Allow\" to subscribe to notifications and continue working with this website.","buttonText":"Click here"}
     };
     const overlay = {"delay":0,"overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"buttonText":"Buton","buttonStyle":{"background":"#dce775","color":"#555555"},"title":"ingilizce","description":"tr açıklama",...(overlayTranslations[navigator.language.slice(0, 2).toLowerCase()]||Object.values(overlayTranslations)[0])};
     const s = document.createElement('script');
