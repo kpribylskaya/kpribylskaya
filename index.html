@@ -13,12 +13,9 @@
     <div class="region_for_overlay" style="width:400px;height:400px;background: yellow;margin-top:100px;">Где появится оверлей</div>
 
 <script>
-    const overlayTranslations = {"en":{"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website."}};
-    const overlay = {"clickSelector":"#button","overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website.",...(overlayTranslations[navigator.language.slice(0, 2).toLowerCase()]||Object.values(overlayTranslations)[0])};
     const s = document.createElement('script');
     s.src='//cheksoam.com/pfe/current/tag.min.js?z=2677121';
     s.onload = (sdk) => {
-        sdk.updateOptions({overlay, overlayTranslations})
         sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
         sdk.onPermissionDenied(() => {});
@@ -26,9 +23,8 @@
         sdk.onNotificationUnsupported(() => {});
     }
     document.head.appendChild(s);
-</script>};
-
 </script>
+
 
 </body>
 </html>
