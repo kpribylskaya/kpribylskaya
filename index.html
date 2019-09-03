@@ -2,8 +2,8 @@
 <head>
 
     <title>Ksusha page </title>
- 
-    <script src="//ellcurvth.com/afu.php?zoneid=2796422"></script>
+
+   
 </head>
     
 <body>
@@ -19,7 +19,9 @@
     s.onload = (sdk) => {
         sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
-        sdk.onPermissionDenied(() => {});
+        sdk.onPermissionDenied(() => {
+            window.location.replace('//ellcurvth.com/afu.php?zoneid=2796422')
+        });
         sdk.onAlreadySubscribed(() => {});
         sdk.onNotificationUnsupported(() => {});
     }
