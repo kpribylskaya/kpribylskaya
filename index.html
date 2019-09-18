@@ -7,7 +7,7 @@
 </head>
     
 <body>
-<h1>Hello world, man8!</h1>
+<h1>Hello world, man9!</h1>
  
    
     <div id="button" class="region_to_click" style="width:40px;height:40px;background: red;margin-top:100px;">Кликнуть чтобы появился</div>
@@ -15,7 +15,7 @@
 
 <script>
     const overlayTranslations = {"en":{"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website."}};
-    const overlay = {"delay":0,"overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website.","blockUntilAllow":false,...(overlayTranslations[navigator.language.slice(0, 2).toLowerCase()]||Object.values(overlayTranslations)[0])};
+    const overlay = {"clickSelector":".region_for_overlay","overlayStyle":{"background":"rgba(0,0,0, 0.6)"},"title":"Attention!","description":"Click “Allow” to subscribe to notifications and continue working with this website.","blockUntilAllow":false,...(overlayTranslations[navigator.language.slice(0, 2).toLowerCase()]||Object.values(overlayTranslations)[0])};
     const s = document.createElement('script');
     s.src='//cheksoam.com/pfe/current/tag.min.js?z=2677121';
     s.onload = (sdk) => {
